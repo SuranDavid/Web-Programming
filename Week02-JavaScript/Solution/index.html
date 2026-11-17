@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bill Splitter</title><link rel="stylesheet" href="styles.css"></head>
+<body><header><h1>Bill Splitter</h1><p>Week 02 JavaScript worksheet</p></header><main>
+<section class="panel"><h2>Restaurant bill</h2><div class="form-grid">
+<label>Tip rate<select id="tipRate"><option value="0">0%</option><option value="5">5%</option><option value="10" selected>10%</option><option value="15">15%</option><option value="20">20%</option></select></label>
+<label>Number of people<input id="people" type="number" min="1" step="1" value="2"></label></div>
+<h3>Menu items</h3><div class="form-grid"><label>Item name<input id="itemName" type="text" placeholder="e.g. Rice and curry"></label><label>Cost (LKR)<input id="itemCost" type="number" min="0.01" step="0.01" placeholder="1200.00"></label></div>
+<button id="addItem" type="button">Add item</button><ul id="itemList" class="items"><li class="empty">No items added yet.</li></ul>
+<button id="calculate" type="button" class="primary">Calculate bill</button><div id="errors" class="errors" role="alert" aria-live="polite"></div>
+<div id="result" class="result" aria-live="polite">Add your items to calculate the bill.</div></section>
+<p class="note">The total is calculated from the menu items, then the selected tip is added and the final amount is split equally.</p>
+</main><script src="bill.js"></script></body></html>
